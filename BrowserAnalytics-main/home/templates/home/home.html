@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Analytics</title>
+</head>
+
+<H1>Home page</H1>
+
+<body>
+{% block content %}
+
+<p>The following are links to tutorials.</p>
+<br>
+<p>Please click me Sebastian!</p>
+
+{% for link in links %}
+<a href="{{link}}">Link {{forloop.counter}}</a>
+<br>
+
+{% endfor %}
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Analytics</title>
+</head>
+
+<H1>Data Staging</H1>
+
+<body>
+
+
+
+<h2>Stage data</h2>
+
+<p>dropdown of file goes here</p>
+
+{% for k, v in dictionary.items %}
+
+<h5>{{k}} {{v}}</h5>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="id" value={{k}}>
+    <button type="submit">Stage this uploaded data</button>
+</form>
+
+
+
+{% endfor %}
+
+
+</body>
+</html>

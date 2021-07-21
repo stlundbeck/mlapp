@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Analytics</title>
+</head>
+
+<H1>Data staging</H1>
+
+<body>
+
+<h1>Hi there </h1>
+
+{{dictionary}}
+
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" name="staging" value={{dictionary}}>
+    <button type="submit">Stage this uploaded data</button>
+</form>
+
+</body>
+</html>
